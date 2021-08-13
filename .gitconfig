@@ -1,6 +1,7 @@
 [core]
 	editor = nvim
 	pager = delta
+  autocrlf = false
 [include]
 	path = ~/themes.gitconfig
 [delta]
@@ -31,6 +32,8 @@
   # Show the files that are currently assume-unchanged
   assumed = "!git ls-files -v | grep ^h | cut -c 3-"
   
+[user]
+	signingkey = 579BB118852E42681F90FCAD8530CE76B612AC91
 [gpg]
 	program = gpg2
 [submodule]
