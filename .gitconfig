@@ -34,7 +34,10 @@
   unassume = update-index --no-assume-unchanged
   # Show the files that are currently assume-unchanged
   assumed = "!git ls-files -v | grep ^h | cut -c 3-"
-  
+  # Find commits by source code
+	fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+  # Find commits by commit message
+	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 [user]
 	signingkey = 579BB118852E42681F90FCAD8530CE76B612AC91
 [gpg]
