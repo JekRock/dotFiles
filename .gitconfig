@@ -22,6 +22,7 @@
   pf = push --force-with-lease
   branch-name = "!git rev-parse --abbrev-ref HEAD"
   po = "!git push -u origin $(git branch-name)"
+  ami = "!git add $(git ls-files --modified --exclude-standard | fzf -m)"
   # Unstage any files that have been added to the staging area
   unstage = reset HEAD
   # Show changes that have been staged
