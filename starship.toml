@@ -1,0 +1,9 @@
+[character]
+success_symbol = "[➜](bold green)"
+
+[time]
+disabled = false
+format = '[\[$time\]]($style) '
+
+[nodejs]
+symbol = "⬢ "
