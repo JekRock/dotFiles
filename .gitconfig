@@ -40,7 +40,7 @@
   # Find commits by commit message
 	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 [user]
-	signingkey = 579BB118852E42681F90FCAD8530CE76B612AC91
+	name = Yevhen Badorov
 [gpg]
 	program = gpg2
 [submodule]
