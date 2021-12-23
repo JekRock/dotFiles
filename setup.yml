@@ -1,5 +1,4 @@
 - hosts: localhost
-  become: true
   vars:
     home: '/home/jek'
     gopath: '/usr/local/go/bin/go'
@@ -22,8 +21,8 @@
         - fzf
         - git-delta
         - ripgrep
+        - fd-find
     - name: Install starship
-      become: yes
       ansible.builtin.shell: sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -y
     - name: Install jump
       ansible.builtin.shell: '{{ gopath }} install github.com/gsamokovarov/jump@latest'
