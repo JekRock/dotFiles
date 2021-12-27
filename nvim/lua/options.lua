@@ -33,3 +33,6 @@ vim.cmd "set noswapfile"
 -- Keep undo history across sessions, by storing in file
 opt.undodir = "/tmp/.vim/backups"
 opt.undofile = true
+
+-- Enable hotkeys for Russian layout
+vim.cmd "set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
