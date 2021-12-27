@@ -1,6 +1,9 @@
+---
 - hosts: localhost
+  connection: local
   vars:
-    home: '/home/jek'
+    user: 'jek'
+    home: '/home/{{ user }}'
     gopath: '/usr/local/go/bin/go'
 
   tasks:
@@ -38,13 +41,21 @@
         recurse: yes
       loop:
         - '{{ home }}/.config/nvim'
+        - '{{ home }}/.config/nvim/lua'
+        - '{{ home }}/.config/nvim/lua/config'
     - name: Set up config symlinks
       file:
         src: '{{ playbook_dir }}/{{ item.src }}'
         dest: '{{ item.dest }}'
         state: link
+        owner: '{{ user }}'
       with_items:
           - { src: 'starship.toml', dest: '{{ home }}/.config/starship.toml'}
           - { src: '.gitconfig', dest: '{{ home }}/.gitconfig'}
-          - { src: 'init.vim', dest: '{{ home }}/.config/nvim/init.vim'}
+          - { src: 'nvim/init.lua', dest: '{{ home }}/.config/nvim/init.lua'}
+          - { src: 'nvim/lua/options.lua', dest: '{{ home }}/.config/nvim/lua/options.lua'}
+          - { src: 'nvim/lua/plugins.lua', dest: '{{ home }}/.config/nvim/lua/plugins.lua'}
+          - { src: 'nvim/lua/autocmd.lua', dest: '{{ home }}/.config/nvim/lua/autocmd.lua'}
+          - { src: 'nvim/lua/config/treesitter.lua', dest: '{{ home }}/.config/nvim/lua/config/treesitter.lua'}
           - { src: '.zshrc', dest: '{{ home }}/.zshrc'}
+
