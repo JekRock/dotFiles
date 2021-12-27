@@ -39,6 +39,7 @@
         path: '{{ item }}'
         state: directory
         recurse: yes
+        owner: '{{ user }}'
       loop:
         - '{{ home }}/.config/nvim'
         - '{{ home }}/.config/nvim/lua'
