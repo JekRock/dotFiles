@@ -28,6 +28,8 @@
       ansible.builtin.shell: '{{ gopath }} install github.com/gsamokovarov/jump@latest'
     - name: Install fnm
       ansible.builtin.shell: 'curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell'
+    - name: Install sdkman
+      ansible.builtin.shell: 'curl -s "https://get.sdkman.io" | bash'
     - name: Create config folders
       file:
         path: '{{ item }}'

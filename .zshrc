@@ -30,3 +30,6 @@ eval "$(starship init zsh)"
 # fnm
 export PATH=/home/jek/.fnm:$PATH
 eval "`fnm env`"
+
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
