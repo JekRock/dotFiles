@@ -58,5 +58,7 @@
           - { src: 'nvim/lua/plugins.lua', dest: '{{ home }}/.config/nvim/lua/plugins.lua'}
           - { src: 'nvim/lua/autocmd.lua', dest: '{{ home }}/.config/nvim/lua/autocmd.lua'}
           - { src: 'nvim/lua/config/treesitter.lua', dest: '{{ home }}/.config/nvim/lua/config/treesitter.lua'}
+          - { src: 'nvim/lua/config/lsp.lua', dest: '{{ home }}/.config/nvim/lua/config/lsp.lua'}
+          - { src: 'nvim/lua/config/lsp-installer.lua', dest: '{{ home }}/.config/nvim/lua/config/lsp-installer.lua'}
           - { src: '.zshrc', dest: '{{ home }}/.zshrc'}
 

@@ -48,12 +48,20 @@ local use = packer.use
 
 -- actual plugins list
 use "wbthomason/packer.nvim"
+use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
 use {
     "nvim-treesitter/nvim-treesitter",
     config = get_config("treesitter"),
     run = ":TSUpdate"
 }
+
+-- LSP
+
+use {"neovim/nvim-lspconfig", config = get_config("lsp")}                       -- enable LSP
+use {"williamboman/nvim-lsp-installer", config = get_config("lsp-installer")}   -- simple to use language server installer
+use "tamago324/nlsp-settings.nvim"                                              -- language server settings defined in json for
+use "jose-elias-alvarez/null-ls.nvim"                                           -- for formatters and linters
 
 
 if PACKER_BOOTSTRAP then
