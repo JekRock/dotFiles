@@ -63,6 +63,9 @@ use {"williamboman/nvim-lsp-installer", config = get_config("lsp-installer")}   
 use "tamago324/nlsp-settings.nvim"                                              -- language server settings defined in json for
 use "jose-elias-alvarez/null-ls.nvim"                                           -- for formatters and linters
 
+use {'kyazdani42/nvim-tree.lua', requires = {                                   -- file explorer
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    }, config = get_config("nvim-tree") }
 
 if PACKER_BOOTSTRAP then
   require("packer").sync()
