@@ -13,8 +13,8 @@ go-install: ## Install Go toolchain
 	curl https://go.dev/dl/go1.17.4.linux-amd64.tar.gz -L -o /tmp/go1.17.4.linux-amd64.tar.gz
 	rm -rf /usr/local/go && tar -C /usr/local -xzf /tmp/go1.17.4.linux-amd64.tar.gz
 ansible-install: ## Install ansible
-	dnf install ansible
+	sudo dnf install ansible
 ansible-run: ## Run the setup.yml ansible playbook
-	ansible-playbook setup.yml
+	sudo ansible-playbook setup.yml
 dnf-update: ## Update packages using dnf
-	dnf update
+	sudo dnf update
