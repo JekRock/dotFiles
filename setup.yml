@@ -28,10 +28,9 @@
         - g++
         - alacritty
         - tmux
+        - zoxide
     - name: Install starship
       ansible.builtin.shell: sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -y
-    - name: Install jump
-      ansible.builtin.shell: '{{ gopath }} install github.com/gsamokovarov/jump@latest'
     - name: Install fnm
       ansible.builtin.shell: 'curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell'
     - name: Install sdkman
