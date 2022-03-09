@@ -24,7 +24,7 @@ alias ls="exa -lG"
 
 export GPG_TTY=$(tty)
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --cmd j)"
 eval "$(starship init zsh)"
 
 # fnm
