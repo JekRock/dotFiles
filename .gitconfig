@@ -53,3 +53,5 @@
 [rerere]
 	enabled = true
 	autoUpdate = true
+[diff]
+	external = difft
