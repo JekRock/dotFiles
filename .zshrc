@@ -17,6 +17,7 @@ compinit
 
 PATH=$PATH:/usr/local/go/bin
 PATH=$PATH:~/go/bin
+PATH=$PATH:~/bin
 
 set -o histignorespace
 
