@@ -39,6 +39,8 @@
       ansible.builtin.shell: 'curl -s "https://get.sdkman.io" | bash'
     - name: Install difftastic
       ansible.builtin.shell: 'cargo install difftastic'
+    - name: Install atuin
+      ansible.builtin.shell: 'cargo install atuin'
     - name: Create config folders
       file:
         path: '{{ item }}'

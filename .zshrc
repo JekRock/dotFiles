@@ -27,6 +27,7 @@ export GPG_TTY=$(tty)
 
 eval "$(zoxide init zsh --cmd j)"
 eval "$(starship init zsh)"
+eval "$(atuin init zsh)"
 
 # fnm
 export PATH=/home/jek/.fnm:$PATH
