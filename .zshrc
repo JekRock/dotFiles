@@ -27,7 +27,10 @@ export GPG_TTY=$(tty)
 
 eval "$(zoxide init zsh --cmd j)"
 eval "$(starship init zsh)"
+
+export ATUIN_NOBIND="true"
 eval "$(atuin init zsh)"
+bindkey '^r' _atuin_search_widget
 
 # fnm
 export PATH=/home/jek/.fnm:$PATH
